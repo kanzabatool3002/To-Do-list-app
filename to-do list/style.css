@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(120deg, rgb(63, 63, 63), rgb(139, 139, 139));
+  padding: 10px;
+}
+.todo-app {
+  width: 100%;
+  max-width: 790px;
+  background: transparent;
+  margin: 70px auto 70px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 10px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+h1,
+h2 {
+  margin-bottom: 1rem;
+  color: white;
+}
+input {
+  flex: 4;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: transparent;
+  color: #ce47c7;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 50px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  background-color: rgb(50, 50, 50);
+  color: white;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  display: block;
+  align-items: center;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 7px;
+  left: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  bottom: 6px;
+  width: 80px;
+  height: 40px;
+  font-size: 20px;
+  color: red;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+ul li span:hover {
+  background-color: #555;
+}
+ul li update {
+  position: absolute;
+  right: 7rem;
+  bottom: 6px;
+  width: 80px;
+  height: 40px;
+  font-size: 20px;
+  color: #ce47c7;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+ul li update:hover {
+  background-color: #555;
+}
